@@ -8,21 +8,21 @@ import seaborn as sns
 #Remove Warnings
 st.balloons()
 st.set_option('deprecation.showPyplotGlobalUse', False)
-st.title("titanics_Dataset")
+st.title("tips_Dataset")
 #import dataset
-df = pd.read_csv('titanics.csv')
+df = pd.read_csv('tips.csv')
 #First thirty rows
-titanics = df.head(10)
+tips = df.head(10)
 #Display the table
-st.table(titanics)
+st.table(tips)
 #############
 #bar plot
 st.subheader("Bar Plot")
-titanics.plot(kind='bar')
+tips.plot(kind='bar')
 st.pyplot()
 ################
 #pairplot
 st.subheader("Pairplot")
-sns.pairplot(titanics,hue='Sex',palette='rainbow')
+sns.pairplot(tips,hue='Sex',palette='rainbow')
 st.pyplot()
 ######################
