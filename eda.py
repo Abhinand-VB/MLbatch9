@@ -1,4 +1,3 @@
-#import libraries https://icfossavb.herokuapp.com/
 import matplotlib.pyplot as plt 
 import pandas as pd
 import streamlit as st
@@ -9,21 +8,21 @@ import seaborn as sns
 #Remove Warnings
 st.balloons()
 st.set_option('deprecation.showPyplotGlobalUse', False)
-st.title("Tips_Dataset")
+st.title("titanics_Dataset")
 #import dataset
-df = pd.read_csv('tips.csv')
+df = pd.read_csv('titanics.csv')
 #First thirty rows
-tips = df.head(10)
+titanics = df.head(10)
 #Display the table
-st.table(tips)
+st.table(titanics)
 #############
 #bar plot
 st.subheader("Bar Plot")
-tips.plot(kind='bar')
+titanics.plot(kind='bar')
 st.pyplot()
 ################
 #pairplot
 st.subheader("Pairplot")
-sns.pairplot(tips,hue='sex',palette='rainbow')
+sns.pairplot(titanics,hue='Sex',palette='rainbow')
 st.pyplot()
 ######################
